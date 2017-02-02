@@ -1,7 +1,7 @@
 # dev_unfittofit
 
 
-Install Locally 
+Install Locally
 
 $ git clone https://github.com/pathwayswithininc/unfittofit.git
 
