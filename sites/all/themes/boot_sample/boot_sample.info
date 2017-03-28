@@ -1,0 +1,39 @@
+name = boot sample
+description = Built to customize the Main Bootstrap theme
+core = 7.x
+base theme = bootstrap
+
+
+;;;;;;;;;;;;;;;;;;;;;
+;; SimplyTest.me
+;;;;;;;;;;;;;;;;;;;;;
+
+simplytest_dependencies[] = jquery_update
+
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Regions
+;;;;;;;;;;;;;;;;;;;;;
+
+regions[navigation]     = 'Navigation'
+regions[header]         = 'Top Bar'
+regions[highlighted]    = 'Highlighted'
+regions[help]           = 'Help'
+regions[content]        = 'Content'
+regions[sidebar_first]  = 'Primary'
+regions[sidebar_second] = 'Secondary'
+regions[footer]         = 'Footer'
+regions[page_top]       = 'Page top'
+regions[page_bottom]    = 'Page bottom'
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Stylesheets
+;;;;;;;;;;;;;;;;;;;;;
+
+stylesheets[all][] = css/global.css.less
+stylesheets[all][] = css/style.css
+stylesheets[all][] = css/carousal.css
+stylesheets[all][] = css/bootstrap-theme.css
+stylesheets[all][] = css/bootstrap.css
+stylesheets[all][] = css/bootstrap-min.css
+stylesheets[all][] = css/ie10-viewport-bug-workaround.css
