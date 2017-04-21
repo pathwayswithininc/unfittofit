@@ -1,0 +1,56 @@
+<?php
+/**
+ * This function defines the URL to the page created etc.
+ * See http://api.drupal.org/api/function/hook_menu/6
+ */
+function contact_custom_menu() {
+  $items = array();
+  $items['contact_custom/contact_us'] = array(
+    'title' => 'Contact Us',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('contact_custom_form'),
+    'access callback' => TRUE
+
+  );
+  return $items;
+}
+
+
+/**
+ * This function gets called in the browser address bar for:
+ * "http://yourhost/my_module/form" or
+ * "http://yourhost/?q=my_module/form". It will generate
+ * a page with this form on it.
+ * This function is called the "form builder". It builds the form.
+ */
+function contact_custom_form($form, &$form_state) {
+
+	// This is the first form element. It's a textfield with a label, "Name"
+  $form['name'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Name:'),
+  );
+  $form['email_address'] = array(
+  		'#type' => 'textfield',
+  		'#title' => t('Email Address:'),
+  );
+  $form['subject'] = array(
+  		'#type' => 'textfield',
+  		'#title' => t('Subject:'),
+  );
+  $form['message'] = array(
+  		'#type' => 'textarea',
+  		'#title' => t('Message:'),
+  );
+  $form['submit_button'] = array(
+    '#type' => 'submit',
+    '#value' => t('Submit'),
+  );
+  return $form;
+}
+function form_example_form_validate($form, &$form_state) {
+}
+
+function form_example_form_submit($form, &$form_state) {
+	dpm($form);
+}

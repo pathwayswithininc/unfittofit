@@ -84,8 +84,15 @@
       <?php endif; ?>
 
       <?php if (!empty($site_name)): ?>
-        <a class="name navbar-brand" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><?php print $site_name; ?></a>
+        <a class="name navbar-brand" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><?php print $site_name;  ?>
+        <?php if (!empty($site_slogan)): ?><br><small><?php print $site_slogan; ?></small><?php endif; ?></a>
       <?php endif; ?>
+
+
+
+    <?php print render($page['header']); ?>
+
+
 
       <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
@@ -117,13 +124,6 @@
 
 <div class="main-container <?php print $container_class; ?>">
 
-  <header role="banner" id="page-header">
-    <?php if (!empty($site_slogan)): ?>
-      <p class="lead"><?php print $site_slogan; ?></p>
-    <?php endif; ?>
-
-    <?php print render($page['header']); ?>
-  </header> <!-- /#page-header -->
 
   <div class="row">
 

@@ -1,0 +1,17 @@
+@import 'compass';
+@import '../bootstrap-sass/bootstrap.scss';
+@import '../bootstrap-sass/bootstrap-sprockets.scss';
+/*
+* Custom overrides */
+$saddlebrown: #8b4513;
+
+
+.carousel-inner .item{
+  margin-top: 250px;
+
+}
+
+.marketing{
+
+  margin-top: 250px;
+}
